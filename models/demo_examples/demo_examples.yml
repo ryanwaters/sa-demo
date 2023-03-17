@@ -1,6 +1,24 @@
 version: 2
 
 models:
+  - name: constraints_example
+    config:
+      constraints_enabled: true
+    columns:
+      - name: id
+        data_type: integer
+        description: hello
+        constraints: ['not null', 'primary key']
+        constraints_check: (id > 0)
+        tests:
+          - unique
+      - name: color
+        constraints:
+          - not null
+          - primary key
+        data_type: string
+      - name: date_day
+        data_type: date
   - name: actual_and_forecasted_returns
     description: Actual and forecasted returned orders; forecast generated using Prophet predictive model
 
