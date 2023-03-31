@@ -2,12 +2,15 @@ version: 2
 
 models:
   - name: stg_jaffle_customers
+    description: The jaffle customers
     columns:
       - name: customer_id
+        description: Primary key for stg_jaffle_customers
         tests:
           - unique
           - not_null
   - name: stg_jaffle_orders
+    description: '{{doc("order_status") }}'
     columns:
       - name: order_id
         tests:
