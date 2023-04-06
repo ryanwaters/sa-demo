@@ -93,6 +93,9 @@ models:
         description: foreign key for suppliers
       - name: order_item_status_code
         description: status of the order item
+        tests:
+          - accepted_values:
+              values: ['billed', 'shipped']
       - name: return_flag
         description: '{{ doc("return_flag") }}'
       - name: line_number

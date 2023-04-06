@@ -21,16 +21,21 @@ models:
           - unique
 
   - name: agg_returned_orders_by_month
-    description: the aggregate number of orders returned broken out by calendar month
+    description: '{{doc("agg_returned_orders_month")}}'
     columns:
       - name: order_month
         description: calendar month the order was placed
+        tests:
+          - not_null
       - name: returned_orders
         description: number of orders returned
+        tests:
+          - dbt_expectations.expect_column_to_exist
       - name: return_rate
         description: rate of orders returned (calc is returned orders / total orders)
       - name: row_count
         description: total rows
+      
 
 exposures:
   - name: returned_orders
