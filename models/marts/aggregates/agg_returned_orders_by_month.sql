@@ -1,5 +1,4 @@
 
--- some comment
 
 
 with fct_order_items as (
