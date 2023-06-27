@@ -1,5 +1,4 @@
 
--- comment
 
 with fct_order_items as (
     select * from {{ ref('fct_order_items') }}
