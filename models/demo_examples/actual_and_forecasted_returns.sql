@@ -1,5 +1,5 @@
 
--- comment
+-- new comment
 with agg_daily_returned_orders as (
     select * from {{ ref('agg_daily_returned_orders') }}
 ),
