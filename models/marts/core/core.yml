@@ -75,6 +75,8 @@ models:
  
   - name: fct_order_items
     description: order items fact table
+    group: orders
+    access: public
     columns:
       - name: order_item_key
         description: '{{ doc("order_item_key") }}'
@@ -139,6 +141,8 @@ models:
   
   - name: fct_orders
     description: orders fact table
+    group: orders
+    access: protected
     columns:
       - name: order_key
         description: primary key of the model
